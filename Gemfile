@@ -15,8 +15,7 @@ gem 'responders'
 gem 'haml-rails'
 gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails', branch: 'bootstrap3'
 gem 'pusher'
-gem 'moves'
-gem 'omniauth-moves'
+gem 'rocket_pants'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'

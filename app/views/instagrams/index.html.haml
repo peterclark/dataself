@@ -1,0 +1,12 @@
+%h1 Listing instagrams
+
+%table.table.table-bordered.table-hover
+  %tr
+    %th Image url
+    %th Location
+
+  - @instagrams.each do |instagram|
+    %tr
+      %td= instagram.image_url
+      %td= instagram.location
+
