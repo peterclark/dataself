@@ -10,6 +10,8 @@ gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+gem 'thin'
+gem 'em-http-request'
 
 gem 'responders'
 gem 'haml-rails'
