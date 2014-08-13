@@ -1,5 +1,7 @@
 class Instagram < ActiveRecord::Base
   
+  scope :recent, -> { order(created_at: :desc).first }
+  
   after_create :notify_clients
   
   private

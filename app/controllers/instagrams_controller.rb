@@ -9,6 +9,10 @@ class InstagramsController < ApplicationController
   def show
     respond_with(@instagram)
   end
+  
+  def recent
+    @instagram = Instagram.recent
+  end
 
   private
   

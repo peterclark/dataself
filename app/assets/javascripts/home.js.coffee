@@ -4,7 +4,7 @@ jQuery ($) ->
   instagrams = pusher.subscribe('instagrams')
 
   instagrams.bind 'created', (data)->
-    alert(data.message)
+    $.ajax url: "instagrams/recent.js"
     
   # data = [
   #   { label: 'Layer 1', values: [ {x: 0, y: 0}, {x: 1, y: 1}, {x: 2, y: 2} ] },

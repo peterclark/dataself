@@ -1,0 +1,1 @@
+$('#instagrams').append "<%=j render @instagram %>"
