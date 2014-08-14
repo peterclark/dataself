@@ -8,7 +8,7 @@ class Instagram < ActiveRecord::Base
   
   def notify_clients
     Pusher.trigger_async('instagrams', 'created', {
-      message: 'An instagram was created.'
+      image_url: image_url
     })
   end
   
