@@ -1,19 +1,10 @@
 %h1 Listing githubs
 
-%table
+%table.table.table-bordered.table-hover
   %tr
     %th Commit url
-    %th
-    %th
-    %th
 
   - @githubs.each do |github|
     %tr
       %td= github.commit_url
-      %td= link_to 'Show', github
-      %td= link_to 'Edit', edit_github_path(github)
-      %td= link_to 'Destroy', github, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-%br
-
-= link_to 'New Github', new_github_path
