@@ -4,7 +4,10 @@ jQuery ($) ->
   instagrams = pusher.subscribe('instagrams')
 
   instagrams.bind 'created', (data)->
-    column = $('.instagram-column').last().clone()
+    instagrams = $('.instagram-column')
+    if instagrams.length == 6
+      instagrams.first().fadeOut(250, -> @.remove())
+    column = instagrams.last().clone()
     column.find('.instagram').attr('src', data.image_url)
     column.hide().appendTo("#instagrams").fadeIn(1000)
     

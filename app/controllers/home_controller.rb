@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   
   def index
-    @instagrams = Instagram.limit 4
+    @instagrams = Instagram.recent_few
   end
   
 end
