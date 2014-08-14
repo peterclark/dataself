@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :githubs, only: [:show, :index]
+
   resources :instagrams, only: [:show, :index] do
     collection do
       get :recent
@@ -9,6 +11,7 @@ Rails.application.routes.draw do
   namespace 'api' do
     api versions: 1, module: "v1" do
       resources :instagrams, only: [:show, :index, :create]  
+      resources :githubs, only: [:show, :index, :create]
     end
   end
 

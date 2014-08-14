@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Commit url:
+  = @github.commit_url
+
+= link_to 'Edit', edit_github_path(@github)
+\|
+= link_to 'Back', githubs_path
