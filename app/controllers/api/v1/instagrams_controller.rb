@@ -13,8 +13,8 @@ class Api::V1::InstagramsController < Api::V1::ApiController
   end
 
   def create
-    image_url, location = params[:image_url], params[:location]
-    @instagram = Instagram.new(image_url: image_url, location: location)
+    image_url = params[:image_url] 
+    @instagram = Instagram.new(image_url: image_url)
     @instagram.save
     expose @instagram
   end
@@ -25,6 +25,6 @@ class Api::V1::InstagramsController < Api::V1::ApiController
     end
 
     def instagram_params
-      params.require(:instagram).permit(:image_url, :location)
+      params.require(:instagram).permit(:image_url)
     end
 end

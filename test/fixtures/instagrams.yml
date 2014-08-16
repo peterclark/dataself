@@ -2,8 +2,6 @@
 
 one:
   image_url: MyString
-  location: MyString
 
 two:
   image_url: MyString
-  location: MyString

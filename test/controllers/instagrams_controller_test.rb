@@ -18,7 +18,7 @@ class InstagramsControllerTest < ActionController::TestCase
 
   test "should create instagram" do
     assert_difference('Instagram.count') do
-      post :create, instagram: { image_url: @instagram.image_url, location: @instagram.location }
+      post :create, instagram: { image_url: @instagram.image_url }
     end
 
     assert_redirected_to instagram_path(assigns(:instagram))
@@ -35,7 +35,7 @@ class InstagramsControllerTest < ActionController::TestCase
   end
 
   test "should update instagram" do
-    patch :update, id: @instagram, instagram: { image_url: @instagram.image_url, location: @instagram.location }
+    patch :update, id: @instagram, instagram: { image_url: @instagram.image_url }
     assert_redirected_to instagram_path(assigns(:instagram))
   end
 
