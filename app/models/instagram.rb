@@ -1,7 +1,11 @@
-class Instagram < ActiveRecord::Base
+class Instagram
+  include Mongoid::Document
+  include Mongoid::Timestamps
+  
+  field :image_url, type: String
   
   scope :recent,      -> { order(created_at: :desc).first }
-  scope :recent_few,  -> { order(created_at: :desc).limit(6).reverse }
+  scope :recent_few,  -> { order(created_at: :desc).limit(6) }
   
   after_create :notify_clients
   
