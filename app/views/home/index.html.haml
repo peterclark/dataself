@@ -1,13 +1,19 @@
-.page-header
-  %h1.text-center
-    = image_tag 'light.png', height: 100
-  
--# %div#area.epoch.category20c{ style: "height: 200px" }
+%h1.text-center
+  = image_tag 'light.png', height: 100
 
+.page-header
+  %h2
+    %i.fa.fa-github
+    Github
+    
 .row#githubs
-  %p
-    #github-heatmap.epoch.category20c{ style: "height: 200px" }
-  
+  .col-lg-12
+    #github-chart.epoch.category20c{ style: "height: 200px" }
+
+.page-header
+  %h2
+    %i.fa.fa-instagram
+    Instagram
+        
 .row#instagrams
-  %p
-    = render @instagrams
+  = render @instagrams

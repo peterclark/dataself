@@ -2,9 +2,11 @@
 
 %table.table.table-bordered.table-hover
   %tr
+    %th Time
     %th Commit url
 
   - @githubs.each do |github|
     %tr
+      %td=l github.commit_time
       %td= github.commit_url
 

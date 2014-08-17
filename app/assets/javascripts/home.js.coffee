@@ -11,26 +11,14 @@ jQuery ($) ->
     column.find('.instagram').attr('src', data.image_url)
     column.hide().appendTo("#instagrams").fadeIn(1000)
   
-  barChartData = [
-    {
-      label: "Series 1",
-      values: [ 
-        {time: 1370044800, y: 100}, 
-        {time: 1370044801, y: 1000}
-      ]
-    },
-    {
-      label: "Series 2",
-      values: [ 
-        {time: 1370044800, y: 78}, 
-        {time: 1370044801, y: 98}
-      ]
-    }
+  githubData = [
+    { label: 'Layer 1', values: [ {x: 0, y: 0}, {x: 1, y: 1}, {x: 2, y: 2} ] },
+    { label: 'Layer 2', values: [ {x: 0, y: 0}, {x: 1, y: 1}, {x: 2, y: 4} ] }
   ]
-
-  $('#github-heatmap').epoch
-    type: 'time.bar'
-    data: barChartData
+  
+  githubChart = $('#github-chart').epoch
+    type: 'area'
+    data: githubData
     axes: ['left', 'right', 'bottom']
   
   
