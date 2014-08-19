@@ -18,6 +18,11 @@ class Api::V1::GithubsController < Api::V1::ApiController
     @github.save
     expose @github
   end
+  
+  def commits_by_day
+    render_json label: 'Commits', values: [x: 1, y: 2]
+  end
+    
 
   private
     def set_github
