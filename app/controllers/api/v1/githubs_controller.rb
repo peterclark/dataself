@@ -13,8 +13,7 @@ class Api::V1::GithubsController < Api::V1::ApiController
   end
 
   def create
-    commit_url = params[:commit_url]
-    @github = Github.new(commit_url: commit_url)
+    @github = Github.new( github_params )
     @github.save
     expose @github
   end
@@ -25,6 +24,6 @@ class Api::V1::GithubsController < Api::V1::ApiController
     end
 
     def github_params
-      params.require(:github).permit(:commit_url)
+      params.permit(:commit_url, :commit_time)
     end
 end
