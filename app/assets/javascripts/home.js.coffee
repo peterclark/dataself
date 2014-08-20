@@ -11,14 +11,4 @@ jQuery ($) ->
     column.find('.instagram').attr('src', data.image_url)
     column.hide().appendTo("#instagrams").fadeIn(1000)
   
-  githubData = [
-    { label: 'Layer 1', values: [ {x: 0, y: 0}, {x: 1, y: 1}, {x: 2, y: 2} ] },
-    { label: 'Layer 2', values: [ {x: 0, y: 0}, {x: 1, y: 1}, {x: 2, y: 4} ] }
-  ]
-  
-  githubChart = $('#github-chart').epoch
-    type: 'area'
-    data: githubData
-    axes: ['left', 'right', 'bottom']
-  
   

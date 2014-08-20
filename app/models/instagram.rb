@@ -4,7 +4,6 @@ class Instagram
   
   field :image_url, type: String
   
-  scope :recent,      -> { order(created_at: :desc).first }
   scope :recent_few,  -> { order(created_at: :desc).limit(6) }
   
   after_create :notify_clients
