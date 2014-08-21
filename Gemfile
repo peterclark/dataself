@@ -12,12 +12,12 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'thin'
 gem 'em-http-request'
-
 gem 'responders'
 gem 'haml-rails'
 gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails', branch: 'bootstrap3'
 gem 'pusher'
 gem 'rocket_pants'
+gem 'chartkick'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'
