@@ -12,15 +12,19 @@ jQuery ($) ->
     column.hide().appendTo("#instagrams").fadeIn(1000)
   
   $('#github-chart').highcharts({
-    chart: { type: 'bar' },
+    chart: { type: 'column' },
     title: { text: 'Fruit Consumption' },
     xAxis: { categories: ['Apples', 'Bananas', 'Oranges'] },
     yAxis: { title: { text: 'Fruit eaten' } },
     series: [{
       name: 'Jane',
       data: [1, 0, 4]
-    }, {
-      name: 'John',
-      data: [5, 7, 3]
     }]
   });
+  
+  $.ajax
+    dataType: "json",
+    url: "/api/1/githubs/commits_by_day"
+    success: (data) ->
+      chart = $('#github-chart').highcharts()
+      chart.series[0].setData [5,1,8]

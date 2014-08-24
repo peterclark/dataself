@@ -9,7 +9,7 @@ class GithubsController < ApplicationController
   def show
     respond_with(@github)
   end
-
+  
   private
   
   def set_github
