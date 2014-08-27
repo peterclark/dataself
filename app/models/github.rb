@@ -8,7 +8,8 @@ class Github
   scope :last_month, -> { where(created_at: (30.days.ago..Time.now)) }
   
   def self.count_by_day
-    last_month.all.inject( Hash.new(0) ) do |counts, github| 
+    days_in_month = (1..30).each_with_object( {} ) { |day,hash| hash[day] = 0 }
+    last_month.all.inject( days_in_month ) do |counts, github| 
       counts[ github.created_at.day ] += 1
       counts
     end
