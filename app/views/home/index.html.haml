@@ -8,8 +8,7 @@
     
 .row
   .col-lg-12
-    #github-chart
-      = column_chart commits_by_day_api_githubs_path(version: 1), library: { xAxis: { title: { text: "Last 30 Days" }}, yAxis: { title: { text: "Number of commits" }}}
+    = column_chart commits_by_day_api_githubs_path(version: 1), library: { xAxis: { title: { text: "Last 30 Days" }}, yAxis: { title: { text: "Number of commits" }}}, id: 'github-chart'
   
 .page-header
   %h2
