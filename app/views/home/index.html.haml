@@ -8,7 +8,7 @@
     
 .row
   .col-lg-12
-    #carousel.carousel.slide{ data: { ride: 'carousel' }, style: "max-width:300px" }
+    #carousel.carousel.slide{ data: { ride: 'carousel' }, style: "max-width:900px" }
       %ol.carousel-indicators
         %li.active{ data: { target: "#carousel", slide: { to: 0 }}}"
         %li{ data: { target: "#carousel", slide: { to: 1 }}}"
@@ -16,11 +16,18 @@
         
       .carousel-inner
         .item.active
-          %img{ src: "http://lorempixel.com/300/300/sports/1" }
+          %img.pull-left{ src: "http://lorempixel.com/300/300/sports/1" }
+          %img.pull-left{ src: "http://lorempixel.com/300/300/sports/2" }
+          %img.pull-left{ src: "http://lorempixel.com/300/300/sports/3" }
         .item
-          %img{ src: "http://lorempixel.com/300/300/sports/2"}
+          %img.pull-left{ src: "http://lorempixel.com/300/300/sports/4" }
+          %img.pull-left{ src: "http://lorempixel.com/300/300/sports/5" }
+          %img.pull-left{ src: "http://lorempixel.com/300/300/sports/6" }
         .item
-          %img{ src: "http://lorempixel.com/300/300/sports/3"}
+          %img.pull-left{ src: "http://lorempixel.com/300/300/sports/7" }
+          %img.pull-left{ src: "http://lorempixel.com/300/300/sports/8" }
+          %img.pull-left{ src: "http://lorempixel.com/300/300/sports/9" }
+        
 
       %a.left.carousel-control{ href: "#carousel", role: "button", data: { slide: "prev" }}
         %span.fa.fa-chevron-left{ style: "position:absolute;top:50%" }
