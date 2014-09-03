@@ -8,7 +8,7 @@
     
 .row
   .col-lg-12
-    #carousel.carousel.slide{ data: { ride: 'carousel' }, style: "max-width:900px" }
+    #carousel.carousel.slide{ data: { ride: 'carousel', interval: 9000 } }
       %ol.carousel-indicators
         %li.active{ data: { target: "#carousel", slide: { to: 0 }}}"
         %li{ data: { target: "#carousel", slide: { to: 1 }}}"
@@ -16,17 +16,29 @@
         
       .carousel-inner
         .item.active
-          %img.pull-left{ src: "http://lorempixel.com/300/300/sports/1" }
-          %img.pull-left{ src: "http://lorempixel.com/300/300/sports/2" }
-          %img.pull-left{ src: "http://lorempixel.com/300/300/sports/3" }
+          .row
+            .col-xs-4
+              %img.img-thumbnail{ src: "http://lorempixel.com/600/600/sports/1" }
+            .col-xs-4
+              %img.img-thumbnail{ src: "http://lorempixel.com/600/600/sports/2" }
+            .col-xs-4
+              %img.img-thumbnail{ src: "http://lorempixel.com/600/600/sports/3" }
         .item
-          %img.pull-left{ src: "http://lorempixel.com/300/300/sports/4" }
-          %img.pull-left{ src: "http://lorempixel.com/300/300/sports/5" }
-          %img.pull-left{ src: "http://lorempixel.com/300/300/sports/6" }
+          .row
+            .col-xs-4
+              %img.img-thumbnail{ src: "http://lorempixel.com/600/600/sports/4" }
+            .col-xs-4
+              %img.img-thumbnail{ src: "http://lorempixel.com/600/600/sports/5" }
+            .col-xs-4
+              %img.img-thumbnail{ src: "http://lorempixel.com/600/600/sports/6" }
         .item
-          %img.pull-left{ src: "http://lorempixel.com/300/300/sports/7" }
-          %img.pull-left{ src: "http://lorempixel.com/300/300/sports/8" }
-          %img.pull-left{ src: "http://lorempixel.com/300/300/sports/9" }
+          .row
+            .col-xs-4
+              %img.img-thumbnail{ src: "http://lorempixel.com/600/600/sports/7" }
+            .col-xs-4
+              %img.img-thumbnail{ src: "http://lorempixel.com/600/600/sports/8" }
+            .col-xs-4
+              %img.img-thumbnail{ src: "http://lorempixel.com/600/600/sports/9" }
         
 
       %a.left.carousel-control{ href: "#carousel", role: "button", data: { slide: "prev" }}
