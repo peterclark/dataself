@@ -8,43 +8,16 @@
     
 .row
   .col-lg-12
-    #carousel.carousel.slide{ data: { ride: 'carousel', interval: 9000 } }
+    #carousel.carousel.slide{ data: { ride: 'carousel', interval: 'false' } }
       %ol.carousel-indicators
-        %li.active{ data: { target: "#carousel", slide: { to: 0 }}}"
-        %li{ data: { target: "#carousel", slide: { to: 1 }}}"
-        %li{ data: { target: "#carousel", slide: { to: 2 }}}"
+        %li.active{ data: { target: "#carousel", slide: { to: 0 }}}
+        %li{ data: { target: "#carousel", slide: { to: 1 }}}
+        %li{ data: { target: "#carousel", slide: { to: 2 }}}
         
       .carousel-inner
         .item.active
-          .row
-            .col-xs-4
-              %img.img-thumbnail{ src: "http://lorempixel.com/600/600/sports/1" }
-            .col-xs-4
-              %img.img-thumbnail{ src: "http://lorempixel.com/600/600/sports/2" }
-            .col-xs-4
-              %img.img-thumbnail{ src: "http://lorempixel.com/600/600/sports/3" }
-        .item
-          .row
-            .col-xs-4
-              %img.img-thumbnail{ src: "http://lorempixel.com/600/600/sports/4" }
-            .col-xs-4
-              %img.img-thumbnail{ src: "http://lorempixel.com/600/600/sports/5" }
-            .col-xs-4
-              %img.img-thumbnail{ src: "http://lorempixel.com/600/600/sports/6" }
-        .item
-          .row
-            .col-xs-4
-              %img.img-thumbnail{ src: "http://lorempixel.com/600/600/sports/7" }
-            .col-xs-4
-              %img.img-thumbnail{ src: "http://lorempixel.com/600/600/sports/8" }
-            .col-xs-4
-              %img.img-thumbnail{ src: "http://lorempixel.com/600/600/sports/9" }
-        
-
-      %a.left.carousel-control{ href: "#carousel", role: "button", data: { slide: "prev" }}
-        %span.fa.fa-chevron-left{ style: "position:absolute;top:50%" }
-      %a.right.carousel-control{ href: "#carousel", role: "button", data: { slide: "next" }}
-        %span.fa.fa-chevron-right{ style: "position:absolute;top:50%" }
+          .row#instagrams
+            = render @instagrams
     
 .page-header
   %h2
@@ -63,11 +36,3 @@
 .row#cardiio
   .col-lg-12
     %p stuff here
-
-.page-header
-  %h2
-    %i.fa.fa-instagram
-    Instagram
-        
-.row#instagrams
-  = render @instagrams

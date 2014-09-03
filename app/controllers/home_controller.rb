@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   
   def index
-    @instagrams = Instagram.recent_few.reverse
+    @instagrams = Instagram.recent_few
   end
   
 end

@@ -6,12 +6,11 @@ jQuery ($) ->
   github = pusher.subscribe('github')
 
   instagram.bind 'created', (data)->
-    instagrams = $('.instagram-column')
-    if instagrams.length == 6
-      instagrams.first().fadeOut(250, -> @.remove())
-    column = instagrams.last().clone()
-    column.find('.instagram').attr('src', data.image_url)
-    column.hide().appendTo("#instagrams").fadeIn(1000)
+    $('.instagram').last().fadeOut 250, ->
+      @.remove()
+      clone = $('.instagram').first().clone() 
+      clone.find('img').attr('src', data.image_url)
+      clone.hide().prependTo('#instagrams').fadeIn(1000)
   
   github.bind 'created', (data)->
     date = new Date(data.commit_time)
