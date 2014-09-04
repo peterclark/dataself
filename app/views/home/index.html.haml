@@ -1,37 +1,27 @@
 
 
-.page-header
-  %h2
-    %i.fa.fa-instagram
-    Instagram
-    
-.row
+.row#instagram-section.section
   .col-lg-12
+    .page-header
+      %h2
+        %i.fa.fa-instagram
+        Instagram
+
     #carousel.carousel.slide{ data: { ride: 'carousel', interval: 'false' } }
-      %ol.carousel-indicators
-        %li.active{ data: { target: "#carousel", slide: { to: 0 }}}
-        %li{ data: { target: "#carousel", slide: { to: 1 }}}
-        %li{ data: { target: "#carousel", slide: { to: 2 }}}
-        
       .carousel-inner
         .item.active
           .row#instagrams
             = render @instagrams
-    
-.page-header
-  %h2
-    %i.fa.fa-github
-    Github
-    
-.row
-  .col-lg-12
-    = column_chart commits_by_day_api_githubs_path(version: 1), library: { xAxis: { title: { text: "Last 30 Days" }}, yAxis: { title: { text: "Number of commits" }}}, id: 'github-chart'
+
+.row#github-section.section
+  .col-lg-12    
+    .page-header
+      %h2
+        %i.fa.fa-github
+        Github
+        
+    .row
+      .col-lg-12
+        = column_chart commits_by_day_api_githubs_path(version: 1), library: { xAxis: { title: { text: "Last 30 Days" }}, yAxis: { title: { text: "Number of commits" }}}, id: 'github-chart'
   
-.page-header
-  %h2
-    %i.fa.fa-heart
-    Cardiio
-    
-.row#cardiio
-  .col-lg-12
-    %p stuff here
+
