@@ -2,8 +2,8 @@ header {
   position: relative;
   overflow: hidden;
   height: 40vh;
-  color: #fff;
-  background: radial-gradient(ellipse farthest-side at 100% 100%, #F8FFF3 10%, #85D8CE 50%, #085078 120%);
+  color: #1A3547;
+  background-color: #FAFAFB;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -31,5 +31,5 @@ header p {
   background-color: #FAFAFB;
 }
 .section {
-  padding-bottom: 2em;
+  padding-bottom: 5em;
 }
