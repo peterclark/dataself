@@ -1,6 +1,15 @@
+.row.section#github-section
+  .col-lg-12    
+    .page-header
+      %h2
+        %i.fa.fa-github
+        Github
+        
+    .row
+      .col-lg-12
+        = column_chart commits_by_day_api_githubs_path(version: 1), library: { chart: { backgroundColor: "#FAFAFB" }, xAxis: { title: { text: "Last 30 Days" }}, yAxis: { title: { text: "Number of commits" }}}, id: 'github-chart'
 
-
-.row#instagram-section.section
+.row.section#instagram-section
   .col-lg-12
     .page-header
       %h2
@@ -12,16 +21,5 @@
         .item.active
           .row#instagrams
             = render @instagrams
-
-.row#github-section.section
-  .col-lg-12    
-    .page-header
-      %h2
-        %i.fa.fa-github
-        Github
-        
-    .row
-      .col-lg-12
-        = column_chart commits_by_day_api_githubs_path(version: 1), library: { chart: { backgroundColor: "#FAFAFB" }, xAxis: { title: { text: "Last 30 Days" }}, yAxis: { title: { text: "Number of commits" }}}, id: 'github-chart'
   
 
