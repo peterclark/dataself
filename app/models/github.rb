@@ -5,6 +5,9 @@ class Github
   field :commit_url, type: String
   field :commit_time, type: DateTime
   
+  validates :commit_url, presence: true
+  validates :commit_time, presence: true
+  
   scope :last_month, -> { where(created_at: (30.days.ago..Time.now)) }
   
   after_create :notify_clients

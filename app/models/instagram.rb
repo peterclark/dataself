@@ -4,6 +4,8 @@ class Instagram
   
   field :image_url, type: String
   
+  validates :image_url, presence: true
+  
   scope :recent_few,  -> { order(created_at: :desc).limit(3) }
   
   after_create :notify_clients
