@@ -2,7 +2,7 @@ class Api::V1::TextMessagesController < Api::V1::ApiController
   version 1
 
   def create
-    @text = text_message_params[:text]
+    @text = text_message_params[:Text]
     
     case @text
     when /^automatic (.+)/
@@ -15,7 +15,7 @@ class Api::V1::TextMessagesController < Api::V1::ApiController
   private
 
     def text_message_params
-      params.permit(:text)
+      params.permit(:Text)
     end
     
 end
