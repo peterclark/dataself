@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   
   namespace 'api' do
     api versions: 1, module: "v1" do
-      resources :twilio, only: [:create]
+      resources :text_messages, only: [:create]
       resources :instagrams, only: [:show, :index, :create]  
       resources :githubs, only: [:show, :index, :create] do
         collection do
