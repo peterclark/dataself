@@ -112,6 +112,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    messengerjs-rails (1.4.1)
     mime-types (1.25.1)
     minitest (5.4.0)
     moneta (0.8.0)
@@ -232,6 +233,7 @@ DEPENDENCIES
   hirb
   jbuilder (~> 2.0)
   jquery-rails
+  messengerjs-rails
   mongoid (~> 4.0.0)
   pusher
   quiet_assets

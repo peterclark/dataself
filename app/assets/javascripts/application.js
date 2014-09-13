@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require messenger
+//= require messenger-theme-flat
 //= require_tree .

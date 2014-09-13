@@ -11,6 +11,9 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require messenger
+  *= require messenger-spinner
+  *= require messenger-theme-flat
  *= require_self
  */
  
