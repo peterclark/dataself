@@ -7,7 +7,7 @@
         
     .row
       .col-lg-12
-        = column_chart commits_by_day_api_githubs_path(version: 1), library: { chart: { backgroundColor: "#FAFAFB" }, xAxis: { title: { text: "Last 30 Days" }}, yAxis: { title: { text: "Number of commits" }}}, id: 'github-chart'
+        = column_chart commits_by_day_api_githubs_path(version: 1), library: commits_by_day_settings, id: 'github-chart'
 
 .row.section#instagram-section
   .col-lg-12
