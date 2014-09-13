@@ -1,5 +1,9 @@
 jQuery ($) ->
   
+  Messenger.options = 
+    extraClasses: 'messenger-fixed messenger-on-top messenger-on-right'
+    theme: 'flat'
+    
   $('.instagram a').fluidbox()
   $('.automatic a').fluidbox() 
   
@@ -9,6 +13,7 @@ jQuery ($) ->
   automatic = pusher.subscribe('automatic')
 
   instagram.bind 'created', (data) ->
+    Messenger().post "<a style='color:#fff' href='#instagram-section'><i class='fa fa-instagram'></i> new instagram loading...</a>"
     $('.instagram').last().fadeOut 250, ->
       @.remove()
       clone = $('.instagram').first().clone() 
@@ -17,6 +22,7 @@ jQuery ($) ->
       clone.hide().prependTo('#instagrams').fadeIn 1000
   
   github.bind 'created', (data) ->
+    Messenger().post "<a style='color:#fff' href='#github-section'><i class='fa fa-github'></i> new commit loading...</a>"
     date = new Date(data.commit_time)
     day = date.getDate()
     chart = $('#github-chart').highcharts()
@@ -24,6 +30,7 @@ jQuery ($) ->
     chart.series[0].data[ day ].update( previous + 1 );
     
   automatic.bind 'created', (data) ->
+    Messenger().post "<a style='color:#fff' href='#automatic-section'><i class='fa fa-car'></i> new trip loading...</a>"
     $('.automatic').last().fadeOut 250, ->
       @.remove()
       clone = $('.automatic').first().clone()
