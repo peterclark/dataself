@@ -2,6 +2,7 @@ jQuery ($) ->
    
   pusher = new Pusher('ec30baff267be45877e8')
   $('.instagram a').fluidbox()
+  $('.automatic a').fluidbox()
   
   instagram = pusher.subscribe('instagram')
   github = pusher.subscribe('github')

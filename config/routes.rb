@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   
-  resources :githubs, only: [:show, :index]
-  resources :instagrams, only: [:show, :index]
+  resources :automatics,  only: [:show, :index]
+  resources :githubs,     only: [:show, :index]
+  resources :instagrams,  only: [:show, :index]
   
   namespace 'api' do
     api versions: 1, module: "v1" do

@@ -15,5 +15,6 @@ config/secrets.yml
 config/mongoid.yml
 /.bundle
 /vendor/bundle
+dump.rdb
 
 .rvmrc

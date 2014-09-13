@@ -6,4 +6,6 @@ class Automatic
   
   validates :trip_map, presence: true
   
+  scope :recent_few, -> { order(created_at: :desc).limit(3) }
+  
 end

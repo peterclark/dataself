@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Trip map:
+  = @automatic.trip_map
+
+= link_to 'Edit', edit_automatic_path(@automatic)
+\|
+= link_to 'Back', automatics_path
