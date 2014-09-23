@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player: MyString
+  team: MyString
+  status: MyString
+  player_url: MyString
+
+two:
+  player: MyString
+  team: MyString
+  status: MyString
+  player_url: MyString

@@ -5,7 +5,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-#banner {
+#banner, #small-banner {
   background: #2c3c74;
 	background: -webkit-linear-gradient(15deg, #85BBCD 12%, #2c3c74 72%);
 	background: -moz-linear-gradient(15deg, #85BBCD 12%, #2c3c74 72%);
@@ -18,7 +18,7 @@ body {
   box-shadow: inset 0 -1px 3px rgba(0,0,0,0.1);
 }
 
-#banner h1 {
+#banner h1, #small-banner h1 {
   font-size: 40px;
   font-weight: 100;
   line-height: 1em;
@@ -26,9 +26,7 @@ body {
   color: #fff;
 }
 
-#banner p {
-  width: 380px;
-  margin: .7em auto 1.35em;
+#banner p, #small-banner p {
   font-size: 20px;
   color: rgba(255,255,255,0.7);
   line-height: 1.3;
@@ -55,7 +53,7 @@ body {
 #github-section {
   background-color: #FAFAFB;
 }
-#fantasy-football-section {
+#football-section {
   background-color: #9b59b6;
   color: #fff;
 }

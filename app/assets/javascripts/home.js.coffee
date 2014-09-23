@@ -5,15 +5,17 @@ jQuery ($) ->
     theme: 'flat'
     
   $('.instagram a').fluidbox()
-  $('.automatic a').fluidbox() 
+  $('.automatic a').fluidbox()
+  $('.football a').fluidbox() 
   
   pusher    = new Pusher('ec30baff267be45877e8')
   instagram = pusher.subscribe('instagram')
   github    = pusher.subscribe('github')
   automatic = pusher.subscribe('automatic')
+  football  = pusher.subscribe('football')
 
   instagram.bind 'created', (data) ->
-    Messenger().post "<a style='color:#fff' href='#instagram-section'><i class='fa fa-instagram'></i> new instagram loading...</a>"
+    Messenger().post "<a style='color:#fff' href='#instagram-section'><i class='fa fa-instagram'></i> instagram loading...</a>"
     $('.instagram').last().fadeOut 250, ->
       @.remove()
       clone = $('.instagram').first().clone() 
@@ -22,7 +24,7 @@ jQuery ($) ->
       clone.hide().prependTo('#instagrams').fadeIn 1000
   
   github.bind 'created', (data) ->
-    Messenger().post "<a style='color:#fff' href='#github-section'><i class='fa fa-github'></i> new commit loading...</a>"
+    Messenger().post "<a style='color:#fff' href='#github-section'><i class='fa fa-github'></i> commit loading...</a>"
     date = new Date(data.commit_time)
     day = date.getDate()
     chart = $('#github-chart').highcharts()
@@ -30,10 +32,13 @@ jQuery ($) ->
     chart.series[0].data[ day ].update( previous + 1 );
     
   automatic.bind 'created', (data) ->
-    Messenger().post "<a style='color:#fff' href='#automatic-section'><i class='fa fa-car'></i> new trip loading...</a>"
+    Messenger().post "<a style='color:#fff' href='#automatic-section'><i class='fa fa-car'></i> trip loading...</a>"
     $('.automatic').last().fadeOut 250, ->
       @.remove()
       clone = $('.automatic').first().clone()
       clone.find('img').attr('src', data.trip_map)
       clone.find('a').attr('href', data.trip_map)
       clone.hide().prependTo('#automatics').fadeIn 1000
+      
+  football.bind 'created', (data) ->
+    Messenger().post "<a style='color:#fff' href='#football-section'><i class='fa fa-trophy'></i> football update loading...</a>"

@@ -8,6 +8,8 @@ class Api::V1::TextMessagesController < Api::V1::ApiController
     when /^automatic (.+)/
       @automatic = Automatic.create trip_map: $1
       expose @automatic
+    when /^football (.+),(.+),(.+),(.+)/
+      @football = Football.create player: $1, team: $2, status: $3, player_url: $4
     else
     end
   end

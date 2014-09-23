@@ -1,0 +1,14 @@
+.row.section#football-section
+  .col-lg-12
+    .page-header
+      %h2
+        .nfl-logo.new-england-patriots
+        .pull-right
+          %small.white= @football.status
+        = @football.player
+
+  .row
+    .col-xs-6   
+      %img{ src: @football.player_url }
+    .col-xs-6
+      .nfl-logo.new-england-patriots

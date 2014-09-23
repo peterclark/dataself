@@ -1,0 +1,26 @@
+$nfl-logo-y: -100px;
+
+.nfl-logo {
+  background-image: image-url("nfl.png");
+  background-repeat: no-repeat;
+  width: 85px;
+  height: 85px;
+  margin: auto;
+}
+
+.arizona-cardinals {
+  background-position: 0 0;
+}
+.atlanta-falcons {
+  background-position: 0 (1 * $nfl-logo-y);
+}
+.new-england-patriots {
+  background-position: 0 (18 * $nfl-logo-y);
+}
+
+.football {
+  margin-bottom: 30px;
+}
+.football-label {
+  background-color: #8e44ad;
+}

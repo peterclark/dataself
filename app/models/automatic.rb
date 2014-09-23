@@ -6,7 +6,7 @@ class Automatic
   
   validates :trip_map, presence: true
   
-  scope :recent_few, -> { order(created_at: :desc).limit(3) }
+  scope :recent, ->(num) { desc(:created_at).limit(num) }
   
   after_create :notify_clients
   

@@ -1,0 +1,18 @@
+.page-header
+  %h1.text-center
+    %i.fa.fa-trophy
+    Fantasy Football
+    
+.row
+  - @footballs.each do |football|
+    .col-xs-6.col-sm-4.col-md-3.col-lg-2.football
+      .text-center
+        .nfl-logo{ class: football.team.parameterize }
+        = link_to football do
+          %img.img-thumbnail{ src: football.player_url }
+        %br
+        = football.player
+        %br
+        .label.label-info= football.status
+        %br
+        .label.label-success=l football.created_at

@@ -1,8 +1,11 @@
 class HomeController < ApplicationController
   
+  layout 'home'
+  
   def index
-    @instagrams = Instagram.recent_few
-    @automatics = Automatic.recent_few
+    @instagrams = Instagram.recent(3)
+    @automatics = Automatic.recent(3)
+    @footballs  = Football.recent(6)
   end
   
 end

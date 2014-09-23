@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :footballs,   only: [:show, :index]
   resources :automatics,  only: [:show, :index]
   resources :githubs,     only: [:show, :index]
   resources :instagrams,  only: [:show, :index]

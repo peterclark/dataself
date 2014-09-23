@@ -27,6 +27,9 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 120px;
 }
+.white {
+  color: #fff;
+}
 .footer {
   position: absolute;
   bottom: 0;
