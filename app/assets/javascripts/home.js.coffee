@@ -42,3 +42,10 @@ jQuery ($) ->
       
   football.bind 'created', (data) ->
     Messenger().post "<a style='color:#fff' href='#football-section'><i class='fa fa-trophy'></i> football update loading...</a>"
+    $('.football').last().fadeOut 250, ->
+      @.remove()
+      clone = $('.football').first().clone()
+      clone.find('a').attr('href', data.player_url)
+      clone.find('.player-name').text( data.player )
+      clone.find('.football-label').text( data.status )
+      clone.hide().prependTo('#footballs').fadeIn 1000
