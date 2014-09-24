@@ -2,7 +2,7 @@ class FootballsController < ApplicationController
   before_action :set_football, only: [:show, :edit]
 
   def index
-    @footballs = Football.recent(6)
+    @footballs = Football.page params[:page]
     respond_with(@footballs)
   end
 

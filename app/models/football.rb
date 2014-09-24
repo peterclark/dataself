@@ -16,6 +16,8 @@ class Football
   
   after_create :notify_clients
   
+  paginates_per 8
+  
   private
   
   def notify_clients
