@@ -6,7 +6,7 @@ jQuery ($) ->
     
   $('.instagram a').fluidbox()
   $('.automatic a').fluidbox()
-  $('.football a').fluidbox() 
+  # $('.football a').fluidbox() 
   
   pusher    = new Pusher('ec30baff267be45877e8')
   instagram = pusher.subscribe('instagram')
