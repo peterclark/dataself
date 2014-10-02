@@ -47,5 +47,6 @@ jQuery ($) ->
       clone = $('.football').first().clone()
       clone.find('a').attr('href', data.player_url)
       clone.find('.player-name').text( data.player )
-      clone.find('.football-label').text( data.status )
+      clone.find('.player-status').text( data.status )
+      clone.find('.time-ago').text("just now")
       clone.hide().prependTo('#footballs').fadeIn 1000

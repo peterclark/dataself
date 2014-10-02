@@ -1,7 +1,9 @@
-.col-xs-4.col-sm-2.football.text-center
-  
-  %a{ href: football_path(football) }
-    .nfl-logo{ class: football.team.parameterize }
-  %div.player-name= football.player
-  .label.label-default.football-label
-    = football.status
+.col-xs-6.col-sm-4.col-md-3.col-lg-2.football.text-center
+  .alert.alert-info
+    %a{ href: football_path(football) }
+      .nfl-logo{ class: football.team.parameterize }
+    .player-name= football.player
+    .player-status= football.status
+    .label.label-info.time-ago
+      = time_ago_in_words football.created_at
+      ago
