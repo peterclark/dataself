@@ -1,7 +1,7 @@
 .col-xs-4.col-sm-2.football.text-center
-  .nfl-logo{ class: football.team.parameterize }
+  
   %a{ href: football_path(football) }
-    %img.img-thumbnail{ src: football.player_url }
+    .nfl-logo{ class: football.team.parameterize }
   %div.player-name= football.player
   .label.label-default.football-label
     = football.status
