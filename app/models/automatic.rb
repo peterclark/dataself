@@ -10,6 +10,8 @@ class Automatic
   
   after_create :notify_clients
   
+  paginates_per 20
+  
   private
   
   def notify_clients
