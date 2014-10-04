@@ -12,6 +12,8 @@ class Github
   
   after_create :notify_clients
   
+  paginates_per 12
+  
   def self.count_by_day
     days_in_month = (1..30).each_with_object( {} ) { |day,hash| hash[day] = 0 }
     last_month.all.inject( days_in_month ) do |counts, github| 

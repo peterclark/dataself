@@ -1,12 +1,20 @@
-%h1 Listing githubs
+.page-header
+  %h1.text-center
+    %i.fa.fa-github
+    Github Commits
 
-%table.table.table-bordered.table-hover
-  %tr
-    %th Time
-    %th Commit url
-
+.row
   - @githubs.each do |github|
-    %tr
-      %td=l github.commit_time
-      %td= github.commit_url
+    .col-xs-6.col-sm-4.col-md-2.github
+      %a.btn.btn-lg.btn-block.btn-info{ href: github.commit_url }
+        %i.fa.fa-github
+        = github.commit_url[-6..-1] || '-'
+        %div.text-info
+          %small
+            = time_ago_in_words github.commit_time
+            ago
+        
+.row.text-center
+  .col-sm-12
+    = paginate @githubs
 
