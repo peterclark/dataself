@@ -9,6 +9,7 @@ class Github
   validates :commit_time, presence: true
   
   scope :last_month, -> { where(created_at: (30.days.ago..Time.now)) }
+  scope :recent, -> { desc(:created_at) }
   
   after_create :notify_clients
   

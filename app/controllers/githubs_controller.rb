@@ -2,7 +2,7 @@ class GithubsController < ApplicationController
   before_action :set_github, only: [:show]
 
   def index
-    @githubs = Github.page params[:page]
+    @githubs = Github.recent.page params[:page]
     respond_with(@githubs)
   end
 
