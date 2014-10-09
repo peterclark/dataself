@@ -1,0 +1,23 @@
+#resume section {
+  margin-top: 30px;
+}
+
+#resume section h2 {
+  text-align: right;
+  color: #f39c12;
+  margin-top: 0px;
+}
+
+@media (max-width: 768px) {
+  #resume section h2 {
+    text-align: left;
+  }
+}
+
+#resume h5 {
+  color: #222;
+  margin-bottom: 0px;
+}
+
+#resume article {
+}
