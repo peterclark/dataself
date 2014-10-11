@@ -2,7 +2,7 @@ class InstagramsController < ApplicationController
   before_action :set_instagram, only: [:show]
 
   def index
-    @instagrams = Instagram.all
+    @instagrams = Instagram.page(params[:page]).recent(nil)
     respond_with(@instagrams)
   end
 

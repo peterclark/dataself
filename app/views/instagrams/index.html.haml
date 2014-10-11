@@ -1,10 +1,11 @@
-%h1 Listing instagrams
+.page-header
+  %h1.text-center
+    %i.fa.fa-instagram
+    Instagrams
 
-%table.table.table-bordered.table-hover
-  %tr
-    %th Image url
-
-  - @instagrams.each do |instagram|
-    %tr
-      %td= instagram.image_url
-
+.row
+  = render @instagrams
+        
+.row.text-center
+  .col-sm-12
+    = paginate @instagrams
