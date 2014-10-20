@@ -23,7 +23,6 @@ class Automatic
   private
   
   def notify_clients
-    puts self.inspect
     Pusher.trigger_async('automatic', 'created', {
       trip_map: trip_map
     })
