@@ -13,7 +13,9 @@ class Api::V1::AutomaticsController < Api::V1::ApiController
   end
 
   def create
-    puts params.inspect
+    @automatic = Automatic.new(trip: automatic_params)
+    @automatic.save
+    expose @automatic
   end
 
   private
@@ -22,6 +24,6 @@ class Api::V1::AutomaticsController < Api::V1::ApiController
     end
 
     def automatic_params
-      params.require(:automatic).permit()
+      params.require(:trip)
     end
 end

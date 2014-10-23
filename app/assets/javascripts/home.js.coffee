@@ -36,8 +36,8 @@ jQuery ($) ->
     $('.automatic').last().fadeOut 250, ->
       @.remove()
       clone = $('.automatic').first().clone()
-      clone.find('img').attr('src', data.trip_map)
-      clone.find('a').attr('href', data.trip_map)
+      clone.find('img').attr('src', data.trip_map_url)
+      clone.find('a').attr('href', data.trip_map_url)
       clone.hide().prependTo('#automatics').fadeIn 1000
       
   football.bind 'created', (data) ->
