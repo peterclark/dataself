@@ -20,6 +20,7 @@ gem 'rocket_pants'
 gem 'chartkick'
 gem 'messengerjs-rails'
 gem 'kaminari'
+gem 'bitly'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'
