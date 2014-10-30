@@ -17,7 +17,9 @@ class Automatic
   private
   
   def set_trip_map_url
-    self.trip_map_url = [MAP_URL, "scale=2&path=enc:", trip['path'], "&size=600x600&sensor=false"].join
+    map_url = [MAP_URL, "scale=2&path=enc:", trip['path'], "&size=600x600&sensor=false"].join
+    bitly = Bitly.client.shorten( map_url )
+    self.trip_map_url = bitly.short_url
   end
   
   def notify_clients
