@@ -2,7 +2,7 @@ class AutomaticsController < ApplicationController
   before_action :set_automatic, only: [:show]
 
   def index
-    @automatics = Automatic.page( params[:page] )
+    @automatics = Automatic.recent(nil).page( params[:page] )
     respond_with(@automatics)
   end
 
