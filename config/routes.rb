@@ -20,8 +20,7 @@ Rails.application.routes.draw do
 
   get '/about', to: 'pages#about', as: :about
   get '/resume', to: 'pages#resume', as: :resume
-  
-  get 'home/index', as: :home
+  get '/home', to: 'home#index', as: :home
   
   root "home#index"
 
