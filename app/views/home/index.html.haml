@@ -33,10 +33,18 @@
   .col-lg-12
     .page-header
       %h2
-        %i.fa.fa-bar-chart
+        %i.fa.fa-road
         Driving Stats
         
     .row#driving
+      .col-xs-4
+        %div.text-center
+          %button.btn.btn-lg.btn-danger.disabled{ style: "font-size: 4em; font-weight: bold"}
+            = Automatic.avg("trip.average_mpg") || 0.0
+          %div
+            Average
+            %br
+            MPG
       
       
 .row.section#football-section
