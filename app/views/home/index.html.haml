@@ -37,14 +37,26 @@
         Driving Stats
         
     .row#driving
-      .col-xs-4
+      .col-sm-4
         %div.text-center
-          %button.btn.btn-lg.btn-danger.disabled{ style: "font-size: 4em; font-weight: bold"}
+          %button.btn.btn-lg.btn-danger.disabled{ style: "font-size: 6em; font-weight: bold"}
             = Automatic.avg("trip.average_mpg") || 0.0
-          %div
-            Average
-            %br
-            MPG
+          %h3
+            .label.label-danger AVERAGE MPG
+            
+      .col-sm-4
+        %div.text-center
+          %button.btn.btn-lg.btn-danger.disabled{ style: "font-size: 6em; font-weight: bold"}
+            = Automatic.avg("trip.average_mpg") || 0.0
+          %h3
+            .label.label-danger AVERAGE MPG
+            
+      .col-sm-4
+        %div.text-center
+          %button.btn.btn-lg.btn-danger.disabled{ style: "font-size: 6em; font-weight: bold"}
+            = Automatic.avg("trip.average_mpg") || 0.0
+          %h3
+            .label.label-danger AVERAGE MPG
       
       
 .row.section#football-section
