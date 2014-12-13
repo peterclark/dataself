@@ -21,6 +21,7 @@ gem 'chartkick'
 gem 'messengerjs-rails'
 gem 'kaminari'
 gem 'bitly'
+gem 'hashie'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'

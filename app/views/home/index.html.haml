@@ -34,29 +34,30 @@
     .page-header
       %h2
         %i.fa.fa-road
-        Driving Stats
+        Most Recent Trip
         
     .row#driving
       .col-sm-4
         %div.text-center
           %button.btn.btn-lg.btn-danger.disabled{ style: "font-size: 6em; font-weight: bold"}
-            = Automatic.avg("trip.average_mpg") || 0.0
+            = number_with_precision( @trip.average_mpg.to_f, precision: 2 ) rescue -1
           %h3
-            .label.label-danger AVERAGE MPG
+            .label.label-danger MPG
             
       .col-sm-4
         %div.text-center
           %button.btn.btn-lg.btn-danger.disabled{ style: "font-size: 6em; font-weight: bold"}
-            = Automatic.avg("trip.average_mpg") || 0.0
+            = number_with_precision( @trip.distance_m.to_f / 1000, precision: 2 ) rescue -1
+            
           %h3
-            .label.label-danger AVERAGE MPG
+            .label.label-danger KILOMETERS
             
       .col-sm-4
         %div.text-center
           %button.btn.btn-lg.btn-danger.disabled{ style: "font-size: 6em; font-weight: bold"}
-            = Automatic.avg("trip.average_mpg") || 0.0
+            = number_with_precision( @trip.fuel_volume_gal.to_f, precision: 2 ) rescue -1
           %h3
-            .label.label-danger AVERAGE MPG
+            .label.label-danger GALLONS
       
       
 .row.section#football-section

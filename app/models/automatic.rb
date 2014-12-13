@@ -14,6 +14,15 @@ class Automatic
   
   paginates_per 20
   
+  def mpg
+  end
+  
+  def meters
+  end
+  
+  def gallons
+  end
+  
   private
   
   def set_trip_map_url
