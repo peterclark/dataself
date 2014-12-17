@@ -40,24 +40,20 @@
       .col-sm-4
         %div.text-center
           %button.btn.btn-lg.btn-danger.disabled{ style: "font-size: 6em; font-weight: bold"}
-            = number_with_precision( @trip.average_mpg.to_f, precision: 2 ) rescue -1
-          %h3
-            .label.label-danger MPG
+            = number_with_precision( @trip.average_mpg.to_f, precision: 1 ) rescue -1
+            %div{ style: "font-size: .25em" } mpg
             
       .col-sm-4
         %div.text-center
           %button.btn.btn-lg.btn-danger.disabled{ style: "font-size: 6em; font-weight: bold"}
-            = number_with_precision( @trip.distance_m.to_f / 1000, precision: 2 ) rescue -1
-            
-          %h3
-            .label.label-danger KILOMETERS
+            = number_with_precision( @trip.distance_m.to_f / 1609.34, precision: 1 ) rescue -1
+            %div{ style: "font-size: .25em" } miles
             
       .col-sm-4
         %div.text-center
           %button.btn.btn-lg.btn-danger.disabled{ style: "font-size: 6em; font-weight: bold"}
-            = number_with_precision( @trip.fuel_volume_gal.to_f, precision: 2 ) rescue -1
-          %h3
-            .label.label-danger GALLONS
+            = number_with_precision( @trip.fuel_volume_gal.to_f, precision: 1 ) rescue -1
+            %div{ style: "font-size: .25em" } gallons
       
       
 .row.section#football-section
