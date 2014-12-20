@@ -40,19 +40,19 @@
       .col-sm-4
         %div.text-center
           %button.btn.btn-lg.btn-block.btn-danger.disabled.odometer
-            = number_with_precision( @trip.average_mpg.to_f, precision: 1 ) rescue -1
+            = number_with_precision( @trip.mpg, precision: 1 )
             %div{ style: "font-size: .25em" } mpg
             
       .col-sm-4
         %div.text-center
           %button.btn.btn-lg.btn-block.btn-danger.disabled.odometer
-            = number_with_precision( @trip.distance_m.to_f / 1609.34, precision: 1 ) rescue -1
+            = number_with_precision( @trip.miles, precision: 2 )
             %div{ style: "font-size: .25em" } miles
             
       .col-sm-4
         %div.text-center
           %button.btn.btn-lg.btn-block.btn-danger.disabled.odometer
-            = number_with_precision( @trip.fuel_volume_gal.to_f, precision: 1 ) rescue -1
+            = number_with_precision( @trip.gallons, precision: 2 )
             %div{ style: "font-size: .25em" } gallons
       
       

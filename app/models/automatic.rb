@@ -15,12 +15,19 @@ class Automatic
   paginates_per 20
   
   def mpg
+    trip_object.average_mpg.to_f rescue -1
   end
   
-  def meters
+  def miles
+    (trip_object.distance_m.to_f / 1609.34) rescue -1
   end
   
   def gallons
+    trip_object.fuel_volume_gal.to_f rescue -1
+  end
+  
+  def trip_object
+    Hashie::Mash.new( self.trip )
   end
   
   private
