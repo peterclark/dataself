@@ -40,20 +40,20 @@
       .col-sm-4
         %div.text-center
           %button.btn.btn-lg.btn-block.btn-danger.disabled.odometer
-            = number_with_precision( @trip.mpg, precision: 1 )
-            %div{ style: "font-size: .25em" } mpg
+            %span#mpg= number_with_precision( @trip.mpg, precision: 1 )
+            %div.smaller mpg
             
       .col-sm-4
         %div.text-center
           %button.btn.btn-lg.btn-block.btn-danger.disabled.odometer
-            = number_with_precision( @trip.miles, precision: 2 )
-            %div{ style: "font-size: .25em" } miles
+            %span#miles= number_with_precision( @trip.miles, precision: 2 )
+            %div.smaller miles
             
       .col-sm-4
         %div.text-center
           %button.btn.btn-lg.btn-block.btn-danger.disabled.odometer
-            = number_with_precision( @trip.gallons, precision: 2 )
-            %div{ style: "font-size: .25em" } gallons
+            %span#gallons= number_with_precision( @trip.gallons, precision: 2 )
+            %div.smaller gallons
       
       
 .row.section#football-section

@@ -40,7 +40,10 @@ class Automatic
   
   def notify_clients
     Pusher.trigger_async('automatic', 'created', {
-      trip_map_url: trip_map_url
+      trip_map_url: trip_map_url,
+      mpg: mpg,
+      miles: miles,
+      gallons: gallons
     })
   end
   

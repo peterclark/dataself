@@ -41,3 +41,6 @@ body {
 .footer .text-muted {
   margin-top: 50px;
 }
+.smaller {
+  font-size: .25em;
+}

@@ -39,6 +39,18 @@ jQuery ($) ->
       clone.find('img').attr('src', data.trip_map_url)
       clone.find('a').attr('href', data.trip_map_url)
       clone.hide().prependTo('#automatics').fadeIn 1000
+      mpg = $('#mpg')
+      gallons = $('#gallons')
+      miles = $('#miles')
+      mpg.fadeOut ->
+        mpg.text( data.mpg )
+        mpg.fadeIn()
+      gallons.fadeOut ->
+        gallons.text( data.gallons )
+        gallons.fadeIn()
+      miles.fadeOut ->
+        miles.text( data.miles )
+        miles.fadeIn()
       
   football.bind 'created', (data) ->
     Messenger().post "<a style='color:#fff' href='#football-section'><i class='fa fa-trophy'></i> football update loading...</a>"
