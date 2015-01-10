@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   def index
     @instagrams = Instagram.recent(3)
     @automatics = Automatic.recent(3)
-    @footballs  = Football.recent(6)
+    # @footballs  = Football.recent(6)
     @trip       = Automatic.last
   end
   
