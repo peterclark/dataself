@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       resources :githubs, only: [:show, :index, :create] do
         collection do
           get :commits_by_day
+          get :commits_by_month
         end
       end
     end

@@ -16,6 +16,11 @@ class Api::V1::GithubsController < Api::V1::ApiController
     @commits = Github.count_by_day
     render_json @commits
   end
+  
+  def commits_by_month
+    @commits = Github.count_by_month
+    render_json @commits
+  end
 
   def create
     @github = Github.new( github_params )

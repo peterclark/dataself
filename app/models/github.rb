@@ -9,6 +9,7 @@ class Github
   validates :commit_time, presence: true
   
   scope :last_month, -> { where(created_at: (30.days.ago..Time.now)) }
+  scope :last_year, -> { where(created_at: (1.year.ago..Time.now)) }
   scope :recent, -> { desc(:created_at) }
   
   after_create :notify_clients
@@ -19,6 +20,14 @@ class Github
     days_in_month = (1..30).each_with_object( {} ) { |day,hash| hash[day] = 0 }
     last_month.all.inject( days_in_month ) do |counts, github| 
       counts[ github.created_at.day ] += 1
+      counts
+    end
+  end
+  
+  def self.count_by_month
+    months_in_year = (1..12).each_with_object( {} ) { |month,hash| hash[month] = 0 }
+    last_year.all.inject( months_in_year ) do |counts, github| 
+      counts[ github.created_at.month ] += 1
       counts
     end
   end

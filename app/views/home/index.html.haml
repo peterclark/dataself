@@ -5,9 +5,13 @@
         %i.fa.fa-github
         Github
         
+    -# .row
+    -#   .col-lg-12
+    -#     = column_chart commits_by_day_api_githubs_path(version: 1), library: commits_by_day_settings, id: 'github-month-chart'
+        
     .row
-      .col-lg-12
-        = column_chart commits_by_day_api_githubs_path(version: 1), library: commits_by_day_settings, id: 'github-chart'
+      .col-lg-qw
+        = column_chart commits_by_month_api_githubs_path(version: 1), library: commits_by_month_settings, id: 'github-year-chart'
 
 .row.section#instagram-section
   .col-lg-12
