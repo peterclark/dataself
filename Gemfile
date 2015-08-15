@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-source 'http://gems.github.com'
+# source 'http://gems.github.com'
 
 gem 'rails', '4.1.4'
 gem "mongoid", "~> 4.0.0"
@@ -44,4 +44,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-

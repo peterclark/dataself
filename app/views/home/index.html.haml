@@ -1,14 +1,14 @@
 .row.section#github-section
-  .col-lg-12    
+  .col-lg-12
     .page-header
       %h2
         %i.fa.fa-github
         Github
-        
+
     -# .row
     -#   .col-lg-12
     -#     = column_chart commits_by_day_api_githubs_path(version: 1), library: commits_by_day_settings, id: 'github-month-chart'
-        
+
     .row
       .col-lg-qw
         = column_chart commits_by_month_api_githubs_path(version: 1), library: commits_by_month_settings, id: 'github-year-chart'
@@ -22,44 +22,44 @@
 
     .row#instagrams
       = render @instagrams
-      
+
 .row.section#automatic-section
   .col-lg-12
     .page-header
       %h2
         %i.fa.fa-car
         Trips
-    
+
     .row#automatics
       = render @automatics
-      
+
 .row.section#driving-section
   .col-lg-12
     .page-header
       %h2
         %i.fa.fa-road
         Most Recent Trip
-        
+
     .row#driving
       .col-sm-4
         %div.text-center
           %button.btn.btn-lg.btn-block.btn-danger.disabled.odometer
-            %span#mpg= number_with_precision( @trip.mpg, precision: 1 )
+            %span#mpg= number_with_precision( @trip.mpg, precision: 1 ) 
             %div.smaller mpg
-            
+
       .col-sm-4
         %div.text-center
           %button.btn.btn-lg.btn-block.btn-danger.disabled.odometer
             %span#miles= number_with_precision( @trip.miles, precision: 2 )
             %div.smaller miles
-            
+
       .col-sm-4
         %div.text-center
           %button.btn.btn-lg.btn-block.btn-danger.disabled.odometer
             %span#gallons= number_with_precision( @trip.gallons, precision: 2 )
             %div.smaller gallons
-      
-      
+
+
 -# .row.section#football-section
 -#   .col-lg-12
 -#     .page-header
@@ -68,5 +68,3 @@
 -#         Fantasy Football
 -#     .row#footballs
 -#       = render @footballs
-  
-
