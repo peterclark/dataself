@@ -24,7 +24,7 @@ class Api::V1::GithubsController < Api::V1::ApiController
 
   def create
     if github_params[:commits]
-      webhook = github_params[:commits]
+      webhook = github_params[:head_commit]
       @github = Github.new( commit_url: webhook[:url], commit_time: webhook[:timestamp] )
     else
       @github = Github.new( github_params )
@@ -39,6 +39,6 @@ class Api::V1::GithubsController < Api::V1::ApiController
     end
 
     def github_params
-      params.permit(:commit_url, :commit_time, commits: [:url, :timestamp])
+      params.permit(:commit_url, :commit_time, head_commit: [:url, :timestamp])
     end
 end
