@@ -25,12 +25,10 @@ class Api::V1::GithubsController < Api::V1::ApiController
   def create
     if github_params[:head_commit]
       webhook = github_params[:head_commit]
-      puts webhook
       @github = Github.new( commit_url: webhook[:url], commit_time: webhook[:timestamp] )
     else
       @github = Github.new( github_params.slice(:commit_url, :commit_time) )
     end
-    puts @github
     @github.save
     expose @github
   end
