@@ -21,28 +21,56 @@
       .row
         %article.col-sm-12
           %h4
-            .label.label-info Ruby
-            .label.label-info Rails
-            .label.label-info MongoDB
-            .label.label-info HTML
-            .label.label-info CSS
-            .label.label-info Javascript
-            .label.label-info jQuery
-            .label.label-info Coffeescript
-            .label.label-info Git
-            .label.label-info Postgres
-            .label.label-info MySQL
-            .label.label-info Capistrano
-            .label.label-info Rspec
-            .label.label-info API Design
-            .label.label-info Bootstrap
-            .label.label-info Mongoid
-            .label.label-info Paperclip
-            .label.label-info Sidekiq
-            .label.label-info Devise
-            .label.label-info CanCan
-            .label.label-info Factory Girl
-            .label.label-info Rocket Pants
+            %div
+              .label.label-warning Languages
+              .label.label-info Ruby
+              .label.label-info Javascript
+              .label.label-info Coffeescript
+              .label.label-info Java
+              .label.label-info SQL
+            %div
+              .label.label-warning Databases
+              .label.label-info Postgres
+              .label.label-info MongoDB
+              .label.label-info Mysql
+              .label.label-info Sqlite
+              .label.label-info Firebase
+            %div
+              .label.label-warning Web Frameworks
+              .label.label-info Ruby on Rails
+              .label.label-info Meteor
+              .label.label-info Express
+            %div
+              .label.label-warning UI Frameworks
+              .label.label-info Bootstrap
+              .label.label-info Foundation
+              .label.label-info Semantic UI
+            %div
+              .label.label-warning APIs
+              .label.label-info Facebook
+              .label.label-info Twitter
+              .label.label-info Twilio
+              .label.label-info Salesforce
+              .label.label-info Oracle
+            %div
+              .label.label-warning Web
+              .label.label-info HTML5
+              .label.label-info CSS
+              .label.label-info jQuery
+              .label.label-info Node
+            %div
+              .label.label-warning Agile Tools
+              .label.label-info JIRA
+              .label.label-info Version One
+              .label.label-info Fogbugz
+            %div
+              .label.label-warning Version Control
+              .label.label-info Git
+              .label.label-info Github
+            %div
+              .label.label-warning Testing
+              .label.label-info Rspec
+              .label.label-info Minitest
 
   %section.row
     .col-sm-3.col-sm-offset-1
@@ -120,6 +148,27 @@
             %li
               %img{ src: 'https://travis-ci.org/peterclark/tinymodel.svg?branch=master' }
               %img{ src: 'https://codeclimate.com/github/peterclark/tinymodel/badges/gpa.svg' }
+      .row
+        %article.col-sm-12
+          %ul.fa-ul
+            %li
+              %i.fa.fa-li.fa-github.fa-lg
+              %strong
+                %a{ href: 'https://github.com/peterclark/redcap' } REDCap
+            %li
+              A Ruby gem for interacting with the REDCap API
+            %li
+              %img{ src: 'https://travis-ci.org/peterclark/redcap.svg?branch=master' }
+              %img{ src: 'https://codeclimate.com/github/peterclark/redcap/badges/gpa.svg' }
+      .row
+        %article.col-sm-12
+          %ul.fa-ul
+            %li
+              %i.fa.fa-li.fa-github.fa-lg
+              %strong
+                %a{ href: 'https://github.com/peterclark/zuck' } Zuck
+            %li
+              A Ruby gem for interacting with the Facebook Marketing API
 
 
 
