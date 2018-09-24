@@ -23,6 +23,6 @@ Rails.application.routes.draw do
   get '/resume', to: 'pages#resume', as: :resume
   get '/home', to: 'home#index', as: :home
   
-  root "home#index"
+  root "pages#resume"
 
 end
