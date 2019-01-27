@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 # source 'http://gems.github.com'
 
-gem 'rails', '4.1.4'
+gem 'rails', '~> 4.2.0'
 gem "mongoid", "~> 4.0.0"
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
@@ -12,9 +12,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'thin'
 gem 'em-http-request'
-gem 'responders'
+gem 'responders', '~> 2.0'
 gem 'haml-rails'
-gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails', branch: 'bootstrap3'
+gem 'twitter-bootstrap-rails', '~> 3.2.0'
 gem 'pusher'
 gem 'rocket_pants'
 gem 'chartkick'
@@ -37,6 +37,7 @@ group :development do
   gem 'awesome_print'
   gem 'wirble'
   gem 'hirb'
+  gem 'web-console', '~> 2.0'
 end
 
 # Use unicorn as the app server
